@@ -1,0 +1,25 @@
+From 0d32b0984466caa415f6351a1b7b25afb9d955dd Mon Sep 17 00:00:00 2001
+From: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+Date: Wed, 4 Nov 2015 15:33:40 +0100
+Subject: [PATCH 4/5] Makefile: ensure ./bin folder exists before it is needed
+
+Signed-off-by: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+---
+ DragonBoard/Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/DragonBoard/Makefile b/DragonBoard/Makefile
+index 311cf50..bdd2514 100644
+--- a/DragonBoard/Makefile
++++ b/DragonBoard/Makefile
+@@ -66,6 +66,7 @@ COMPILER_FLAGS += $(LOG_FLAGS)
+ MAKE_CMD = $(CC) $(SRC_FILES) $(COMPILER_FLAGS) -o $(APP_DIR)/$(APP_NAME) $(LD_FLAG) $(EXTERNAL_LIBS) $(INCLUDE_ALL_DIRS)
+ 
+ all:
++	$(DEBUG)mkdir -p $(APP_DIR)
+ 	$(DEBUG)$(MAKE_CMD)
+ 	
+ clean:
+-- 
+2.6.1
+

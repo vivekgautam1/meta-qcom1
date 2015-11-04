@@ -1,0 +1,24 @@
+From 7deee3578026c4dea9987227a0df6579457f0f60 Mon Sep 17 00:00:00 2001
+From: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+Date: Wed, 4 Nov 2015 15:32:18 +0100
+Subject: [PATCH 2/5] Makefile: do not hardcode CC to gcc, be nice for cross
+ compiler
+
+Signed-off-by: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+---
+ DragonBoard/Makefile | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/DragonBoard/Makefile b/DragonBoard/Makefile
+index 113049c..072831b 100644
+--- a/DragonBoard/Makefile
++++ b/DragonBoard/Makefile
+@@ -1,5 +1,3 @@
+-CC = gcc
+-
+ #remove @ for no make command prints
+ DEBUG=@
+ 
+-- 
+2.6.1
+

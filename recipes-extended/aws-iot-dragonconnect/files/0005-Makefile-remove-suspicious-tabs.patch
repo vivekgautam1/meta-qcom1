@@ -1,0 +1,34 @@
+From 5a27637004b84d7371e754a22d8666732f777c25 Mon Sep 17 00:00:00 2001
+From: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+Date: Wed, 4 Nov 2015 15:34:33 +0100
+Subject: [PATCH 5/5] Makefile: remove suspicious tabs
+
+Signed-off-by: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+---
+ DragonBoard/Makefile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/DragonBoard/Makefile b/DragonBoard/Makefile
+index bdd2514..99bc950 100644
+--- a/DragonBoard/Makefile
++++ b/DragonBoard/Makefile
+@@ -49,7 +49,7 @@ INCLUDE_ALL_DIRS += $(MQTT_INCLUDE_DIR)
+ INCLUDE_ALL_DIRS += $(TLS_INCLUDE_DIR)
+ INCLUDE_ALL_DIRS += $(APP_INCLUDE_DIRS)
+ INCLUDE_ALL_DIRS += $(GLIB_INCLUDE_DIR)
+- 
++
+ SRC_FILES += $(MQTT_SRC_FILES)
+ SRC_FILES += $(APP_SRC_FILES)
+ SRC_FILES += $(IOT_SRC_FILES)
+@@ -68,6 +68,6 @@ MAKE_CMD = $(CC) $(SRC_FILES) $(COMPILER_FLAGS) -o $(APP_DIR)/$(APP_NAME) $(LD_F
+ all:
+ 	$(DEBUG)mkdir -p $(APP_DIR)
+ 	$(DEBUG)$(MAKE_CMD)
+-	
++
+ clean:
+ 	rm -rf $(APP_DIR)/$(APP_NAME)	
+-- 
+2.6.1
+

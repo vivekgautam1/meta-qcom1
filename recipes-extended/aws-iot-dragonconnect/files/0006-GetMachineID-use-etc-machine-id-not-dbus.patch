@@ -1,0 +1,26 @@
+From f7a2c53d9f1ce259a4af0690bd33c98f4272f0a5 Mon Sep 17 00:00:00 2001
+From: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+Date: Thu, 5 Nov 2015 00:01:36 +0100
+Subject: [PATCH] GetMachineID: use /etc/machine-id, not dbus
+
+Signed-off-by: Nicolas Dechesne <nicolas.dechesne@linaro.org>
+---
+ DragonBoard/src/util.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/DragonBoard/src/util.c b/DragonBoard/src/util.c
+index 683dacf..77a5efe 100644
+--- a/DragonBoard/src/util.c
++++ b/DragonBoard/src/util.c
+@@ -17,7 +17,7 @@ char machineID[MAX_BUF]="";
+ char* GetMachineID()
+ {
+ 	FILE *fptr ;
+-	fptr = fopen("/var/lib/dbus/machine-id","r");
++	fptr = fopen("/etc/machine-id","r");
+ 	if(!fptr)
+ 		return NULL;
+ 
+-- 
+2.6.1
+
