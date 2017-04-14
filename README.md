@@ -67,3 +67,5 @@ Please report any issue on https://github.com/ndechesne/meta-qcom/issues
 ## Maintainer(s)
 
 Nicolas Dechesne <nicolas.dechesne@linaro.org>
+
+##Junk stuff
